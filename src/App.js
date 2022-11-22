@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import gsap from 'gsap';
+import {useRef, useEffect} from 'react'
 import './App.css';
+import Home from './Home/Home';
+import GetInTouch from './GetInTouch.js/GetInTouch';
 
 function App() {
+  const appRef = useRef(null);
+  
+  useEffect(() => {
+    const el22 = appRef.current;
+
+    gsap.to(el22, {duration: 2, css: {visibility: 'visible'}})
+  },[])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Router>
+       <div className='app bg-zinc-900' ref={appRef}>
+        <Routes>
+            <Route path= "/" element= {<Home/>} />
+            <Route path= "/GetInTouch" element= {<GetInTouch/>} />
+        </Routes>  
+      </div>
+    </Router>
     </div>
   );
 }

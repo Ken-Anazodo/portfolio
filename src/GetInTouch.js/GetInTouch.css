@@ -1,0 +1,65 @@
+.subTitle{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20%;
+    text-transform: uppercase; 
+}
+
+.social{
+    text-transform: uppercase;
+}
+
+.backToHomePage :hover{
+    animation: none;
+}
+
+.arrow1{
+    height: 4vw;
+    width: 4vw;
+    border-color: white;
+    border-width: 0 3px 3px 0;
+    background: transparent;
+    /* display: none; */
+}
+
+.arrow2{
+    height: 2vw;
+    width: 2vw;
+    border-color: white;
+    border-width: 0 3px 3px 0;
+    background: transparent;
+}
+
+.right{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up{
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.hoverArrows{
+    margin-bottom: 30vh;
+}
+
+.hoverArrows1{
+    display: flex;
+    margin-right: 90px;
+}
+
+.hoverArrow-MobBreakPoint{
+    display: flex;
+}
+
+@media only screen and (min-width: 640px) {
+    .arrow1{
+        border-width: 0 5px 5px 0;
+    }
+}
